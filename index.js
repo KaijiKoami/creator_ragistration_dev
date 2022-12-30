@@ -18,5 +18,4 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch((err) => {
             console.log("error", err);
         });
-        document.getElementById('useridfield').value = data.context.userId;
 });
