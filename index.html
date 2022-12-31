@@ -212,7 +212,7 @@
           const form = document.querySelector('#form');
           form.addEventListener('submit', (event) => {
 
-            // event.stopPropagation();
+            event.stopPropagation();
             event.preventDefault();
             window.close();
             const formData = new formData(form);
