@@ -13,7 +13,7 @@
   <!-- 画像提出form -->
   <div id="forms">
     <form class="item__contet"
-      action="https://script.google.com/macros/s/AKfycbxU707u97NR298OnYQSqC8tb4mqYSMyecyo2eA0qhSwh5xPHo4tDwJPXV1NzBdSUV33/exec"
+      action="https://script.google.com/macros/s/AKfycbwYo0B6cN16riz5xU8KTApqLoIS-NgEtSrj6ufxqOPmigunOxmVAKVj2YASzYGFltqZ/exec"
       method="POST">
       <div class="item__box" id="setQR">
         <h4 class="item__title">TikTokQRの提出</h4>
@@ -208,6 +208,12 @@
       <div class="item__box" id="sendbtn">
         <input type="submit" value="Register" id="Register">
         <script>
+          const $form = $('#form')
+          $('.btn-send').on('click', evt => {
+            $form.submit()
+            window.close();
+            return false
+          })
             // if (checkCount == 0) {
             //   var elem = document.getElementById('Register');
             //   if (elem.hidden == false) {
@@ -220,4 +226,5 @@
   </div>
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </body>
+
 </html>
