@@ -1,10 +1,9 @@
-import './style.css';
 import liff from '@line/liff'
 
 document.addEventListener("DOMContentLoaded", function () {
-    liff
-        .init({ 
-            liffId: "1657773262-O5ENDkKN",
+
+    liff.init({ 
+            liffId: '1657773262-O5ENDkKN',
             withLoginOnExternalBrowser: true,
         })
         .then(() => {
