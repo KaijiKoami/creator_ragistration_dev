@@ -13,7 +13,7 @@
   <!-- 画像提出form -->
   <div id="forms">
     <form class="item__contet"
-      action="https://script.google.com/macros/s/AKfycbzwvcVVSLgUsklnKIVr8GP-nruZDxG_IJuIzioVQFic_h2bkOAFqvvqRVN0U5J-yWME/exec"
+      action="https://script.google.com/macros/s/AKfycbzpQC7qlJpHVbEc3axVPsutrzmS1mNrW2c5zgJ7-1woDKS57_h3e7DYShGcLXalE0vo/exec"
       method="POST">
       <div class="item__box" id="setQR">
         <h4 class="item__title">TikTokQRの提出</h4>
@@ -40,7 +40,7 @@
         <p>TikTokで投稿している動画のジャンルを<strong>3つまで</strong>お答えください。</p>
         <br>
         <span>
-          <input type="checkbox" id="カップル" value="カップル" name="genre[]" required>
+          <input type="checkbox" id="カップル" value="カップル" name="genre[]">
           <label for="カップル">カップル</label>
         </span>
         <span>
@@ -109,7 +109,7 @@
         </span>
         <script>
           const checkMax = 3;
-          const checkBoxes = document.getElementsByName('genre');
+          const checkBoxes = document.getElementsByName('genre[]');
 
           function checkCount(target) {
             let checkCount = 0;
@@ -206,7 +206,15 @@
       </div>
       <input type="hidden" id="useridfield" name="useridfield" value="test2">
       <div class="item__box" id="sendbtn">
-        <input type="submit" value="Register">
+        <input type="submit" value="Register" id="Register" disabled>
+        <script>
+            if (checkCount == 0) {
+              var elem = document.getElementById('Register');
+              if (elem.hidden == false) {
+                elem.hidden = true;
+              }
+            }
+        </script>
       </div>
     </form>
   </div>
