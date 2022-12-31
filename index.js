@@ -42,6 +42,7 @@ function getLineData() {
     .then(profile => {
       const userId = profile.userId;
       const displayName = profile.displayName;
+
+      document.getElementById('useridfield').value = userId;
     })
-    document.getElementById('useridfield').value = userId;
 }
