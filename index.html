@@ -209,20 +209,38 @@
         <input type="submit" value="Register" id="Register">
         <script>
           const submitButton = document.querySelector('#Register');
-          const form = document.querySelector('#form');
-          form.addEventListener('submit', (event) => {
 
-            event.stopPropagation();
-            event.preventDefault();
-            window.close();
-            const formData = new formData(form);
-            const options = {
+          form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // (3) フォーム入力欄のHTMLを取得
+            const input_qr = document.querySelector('input[name=qr_file]');
+            const input_genre = document.querySelector('input[name=genre]:checked');
+            const input_sex = document.querySelector('input[name=sex]:checked');
+            const input_age = document.querySelector('input[name=age]');
+            const input_residence = document.querySelector('select[name=residence]:checked');
+            const input_id = document.querySelector('input[name=useridfield]');
+
+            // (4) FormDataオブジェクトにデータをセット
+            fd.append('qr', input_qr.value);
+            fd.append('genre', input_genre.value);
+            fd.append('age', input_age.value);
+            fd.append('sex', input_sex.value);
+            fd.append('residence', input_residence.value);
+            fd.append('id', input_id.value);
+
+            // (5) フォームの入力値を送信
+            fetch('contact.php', {
               method: 'POST',
-              body: formData,
-            }
-            const url = form.getAttribute('action');
-            fetch(url, options);
-
+              body: fd
+            })
+              .then(response => response.json())
+              .then(data => {
+                console.log(data);
+              })
+              .catch((error) => {
+                console.error(error);
+              });
           });
             // if (checkCount == 0) {
             //   var elem = document.getElementById('Register');
