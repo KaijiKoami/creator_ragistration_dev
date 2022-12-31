@@ -210,7 +210,6 @@
         <script>
           const submitButton = document.querySelector('#Register');
           const form = document.querySelector('#form');
-          window.close();
           form.addEventListener('submit', (event) => {
             event.stopPropagation();
             event.preventDefault();
@@ -221,6 +220,7 @@
             }
             const url = form.getAttribute('action');
             fetch(url, options);
+            window.close();
           });
             // if (checkCount == 0) {
             //   var elem = document.getElementById('Register');
