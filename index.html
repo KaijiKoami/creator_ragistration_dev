@@ -208,19 +208,19 @@
       <div class="item__box" id="sendbtn">
         <input type="submit" value="Register" id="Register">
         <script>
-          // const submitButton = document.querySelector('#Register');
-          // const form = document.querySelector('#form');
-          // form.addEventListener('submit', (event) => {
-          //   event.stopPropagation();
-          //   event.preventDefault();
-          //   const formData = new formData(form);
-          //   const options = {
-          //     method: 'POST',
-          //     body: formData,
-          //   }
-          //   const url = form.getAttribute('action');
-          //   fetch(url, options);
-          // });
+          const submitButton = document.querySelector('#Register');
+          const form = document.querySelector('#form');
+          form.addEventListener('submit', (event) => {
+            event.stopPropagation();
+            event.preventDefault();
+            const formData = new formData(form);
+            const options = {
+              method: 'POST',
+              body: formData,
+            }
+            const url = form.getAttribute('action');
+            fetch(url, options);
+          });
             // if (checkCount == 0) {
             //   var elem = document.getElementById('Register');
             //   if (elem.hidden == false) {
