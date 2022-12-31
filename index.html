@@ -13,13 +13,13 @@
   <!-- 画像提出form -->
   <div id="forms">
     <form class="item__contet"
-      action="https://script.google.com/macros/s/AKfycbzETLgm1-VUrbSLmMTpWtZu8A8AUKT0o2Ak6zJnLlMGPTKcFLZzP171XpaaTmk1ZVFL/exec"
+      action="https://script.google.com/macros/s/AKfycbwvxrk2z3u7QiJwxC_zV8fFd-aCxQjJEikfZiBSMchMLoT_fD9qDg9rWteJV_IZo4e8/exec"
       method="POST">
       <div class="item__box" id="setQR">
         <h4 class="item__title">TikTokQRの提出</h4>
         <label for="file_photo">
           画像を選択してください
-          <input type="file" accept='image/*' id="file_photo" name="qr_file" onchange="previewImage(this);" required>
+          <input type="file" accept='image/*' id="file_photo" name="qr_file" onchange="previewImage(this);">
         </label>
         <p class="preview__image">
           <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -133,7 +133,7 @@
       <div class="item__box" id="sex">
         <h4 class="item__title">性別</h4>
         <div class="item__contet">
-          <input type="radio" id="inq1" name="sex" value="男性" required>
+          <input type="radio" id="inq1" name="sex" value="男性">
           <label for="inq1">男性</label>
           <input type="radio" id="inq2" name="sex" value="女性">
           <label for="inq2">女性</label>
@@ -147,7 +147,7 @@
         <label for="age">
           <h4 class="item__title">年齢</h4>
         </label>
-        <input class="item__contet" name="age" id="age" type="number" placeholder="20" min="0" max="150" required><span> 歳</span>
+        <input class="item__contet" name="age" id="age" type="number" placeholder="20" min="0" max="150"><span> 歳</span>
       </div>
       <div class="item__box" id="residence">
         <label for="residence_">
