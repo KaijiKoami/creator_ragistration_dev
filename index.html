@@ -211,10 +211,11 @@
           const form = document.querySelector('#form');
 
           function click_s(){
+
+            window.close();
             form.submit();
             form[0].reset();
 
-            window.close();
             return false;
           }
           
