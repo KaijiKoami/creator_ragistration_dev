@@ -13,7 +13,7 @@
   <!-- 画像提出form -->
   <div id="forms">
     <form class="item__contet"
-      action="https://script.google.com/macros/s/AKfycbxolb_502F4nSsFLzjXeElRfL8vusGEyeZeY8heWe4CulUGrLZ5zxKK77UDL0s07lI/exec"
+      action="https://script.google.com/macros/s/AKfycbzETLgm1-VUrbSLmMTpWtZu8A8AUKT0o2Ak6zJnLlMGPTKcFLZzP171XpaaTmk1ZVFL/exec"
       method="POST">
       <div class="item__box" id="setQR">
         <h4 class="item__title">TikTokQRの提出</h4>
@@ -40,76 +40,76 @@
         <p>TikTokで投稿している動画のジャンルを<strong>3つまで</strong>お答えください。</p>
         <br>
         <span>
-          <input type="checkbox" id="カップル" value="カップル" name="genre[]">
+          <input type="checkbox" id="カップル" value="カップル" name="genre">
           <label for="カップル">カップル</label>
         </span>
         <span>
-          <input type="checkbox" id="エンタメ" value="エンタメ" name="genre[]">
+          <input type="checkbox" id="エンタメ" value="エンタメ" name="genre">
           <label for="エンタメ">エンタメ</label>
         </span>
         <span>
-          <input type="checkbox" id="料理" value="料理" name="genre[]">
+          <input type="checkbox" id="料理" value="料理" name="genre">
           <label for="料理">料理</label>
         </span>
         <span>
-          <input type="checkbox" id="ファッション" value="ファッション" name="genre[]">
+          <input type="checkbox" id="ファッション" value="ファッション" name="genre">
           <label for="ファッション">ファッション</label>
         </span>
         <span>
-          <input type="checkbox" id="ペット" value="ペット" name="genre[]">
+          <input type="checkbox" id="ペット" value="ペット" name="genre">
           <label for="ペット">ペット</label>
         </span>
         <span>
-          <input type="checkbox" id="美容" value="美容" name="genre[]">
+          <input type="checkbox" id="美容" value="美容" name="genre">
           <label for="美容">美容</label>
         </span>
         <span>
-          <input type="checkbox" id="ファミリー" value="ファミリー" name="genre[]">
+          <input type="checkbox" id="ファミリー" value="ファミリー" name="genre">
           <label for="ファミリー">ファミリー</label>
         </span>
         <span>
-          <input type="checkbox" id="スポーツ" value="スポーツ" name="genre[]">
+          <input type="checkbox" id="スポーツ" value="スポーツ" name="genre">
           <label for="スポーツ">スポーツ</label>
         </span>
         <span>
-          <input type="checkbox" id="アニメ・漫画" value="アニメ・漫画" name="genre[]">
+          <input type="checkbox" id="アニメ・漫画" value="アニメ・漫画" name="genre">
           <label for="アニメ・漫画">アニメ・漫画</label>
         </span>
         <span>
-          <input type="checkbox" id="イラスト" value="イラスト" name="genre[]">
+          <input type="checkbox" id="イラスト" value="イラスト" name="genre">
           <label for="イラスト">イラスト</label>
         </span>
         <span>
-          <input type="checkbox" id="旅行" value="旅行" name="genre[]">
+          <input type="checkbox" id="旅行" value="旅行" name="genre">
           <label for="旅行">旅行</label>
         </span>
         <span>
-          <input type="checkbox" id="音楽" value="音楽" name="genre[]">
+          <input type="checkbox" id="音楽" value="音楽" name="genre">
           <label for="音楽">音楽</label>
         </span>
         <span>
-          <input type="checkbox" id="フィットネス" value="フィットネス" name="genre[]">
+          <input type="checkbox" id="フィットネス" value="フィットネス" name="genre">
           <label for="フィットネス">フィットネス</label>
         </span>
         <span>
-          <input type="checkbox" id="VLOG" value="VLOG" name="genre[]">
+          <input type="checkbox" id="VLOG" value="VLOG" name="genre">
           <label for="VLOG">VLOG</label>
         </span>
         <span>
-          <input type="checkbox" id="ビジネス" value="ビジネス" name="genre[]">
+          <input type="checkbox" id="ビジネス" value="ビジネス" name="genre">
           <label for="ビジネス">ビジネス</label>
         </span>
         <span>
-          <input type="checkbox" id="ライフハック" value="ライフハック" name="genre[]">
+          <input type="checkbox" id="ライフハック" value="ライフハック" name="genre">
           <label for="ライフハック">ライフハック</label>
         </span>
         <span>
-          <input type="checkbox" id="グルメ" value="グルメ" name="genre[]">
+          <input type="checkbox" id="グルメ" value="グルメ" name="genre">
           <label for="グルメ">グルメ</label>
         </span>
         <script>
-          const checkMax = 3;
-          const checkBoxes = document.getElementsByName('genre[]');
+          const checkMax = 1;
+          const checkBoxes = document.getElementsByName('genre');
 
           function checkCount(target) {
             let checkCount = 0;
@@ -206,7 +206,7 @@
       </div>
       <input type="hidden" id="useridfield" name="useridfield" value="test2">
       <div class="item__box" id="sendbtn">
-        <input type="submit" value="Register" id="Register" >
+        <input type="submit" value="Register" id="Register" onclick="window.open('','_self').close();">
         <script>
             // if (checkCount == 0) {
             //   var elem = document.getElementById('Register');
