@@ -213,7 +213,7 @@
           form.addEventListener('submit', (event) => {
 
             // event.stopPropagation();
-            // event.preventDefault();
+            event.preventDefault();
             const formData = new formData(form);
             const options = {
               method: 'POST',
