@@ -211,6 +211,17 @@
     </form>
   </div>
   <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script>   
+    liff
+        .getProfile()
+        .then((profile) => {
+            const name = profile.displayName;
+        })
+        .catch((err) => {
+            console.log("error", err);
+        });
+    document.getElementById('useridfield').value = name;
+  </script>
 </body>
 
 </html>
