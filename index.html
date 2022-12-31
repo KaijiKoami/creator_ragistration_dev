@@ -19,7 +19,7 @@
         <h4 class="item__title">TikTokQRの提出</h4>
         <label for="file_photo">
           画像を選択してください
-          <input type="file" accept='image/*' id="file_photo" name="qr_file" onchange="previewImage(this);">
+          <input type="file" accept='image/*' id="file_photo" name="qr_file" onchange="previewImage(this);" required>
         </label>
         <p class="preview__image">
           <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -40,7 +40,7 @@
         <p>TikTokで投稿している動画のジャンルを<strong>3つまで</strong>お答えください。</p>
         <br>
         <span>
-          <input type="checkbox" id="カップル" value="カップル" name="genre[]">
+          <input type="checkbox" id="カップル" value="カップル" name="genre[]" required>
           <label for="カップル">カップル</label>
         </span>
         <span>
@@ -133,7 +133,7 @@
       <div class="item__box" id="sex">
         <h4 class="item__title">性別</h4>
         <div class="item__contet">
-          <input type="radio" id="inq1" name="sex" value="男性">
+          <input type="radio" id="inq1" name="sex" value="男性" required>
           <label for="inq1">男性</label>
           <input type="radio" id="inq2" name="sex" value="女性">
           <label for="inq2">女性</label>
@@ -147,7 +147,7 @@
         <label for="age">
           <h4 class="item__title">年齢</h4>
         </label>
-        <input class="item__contet" name="age" id="age" type="number" placeholder="20" min="0" max="150"><span> 歳</span>
+        <input class="item__contet" name="age" id="age" type="number" placeholder="20" min="0" max="150" required><span> 歳</span>
       </div>
       <div class="item__box" id="residence">
         <label for="residence_">
