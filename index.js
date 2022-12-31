@@ -4,8 +4,7 @@ import './style.css';
 document.addEventListener("DOMContentLoaded", function () {
 
     liff.init({ 
-            liffId: '1657773262-O5ENDkKN',
-            withLoginOnExternalBrowser: true,
+            liffId: '1657773262-O5ENDkKN'
         })
         .then(() => {
             initializeApp();
@@ -41,8 +40,8 @@ function initializeApp() {
 function getLineData() {
     liff.getProfile()
     .then(profile => {
-      console.log("ログインしてるユーザーのid:" + profile.userId);
-      console.log("ログインしてるユーザーの名前:" + profile.displayName);
-      console.log("ログインしてるユーザーの画像URL:" + profile.pictureUrl);
+      const userId = profile.userId;
+      const displayName = profile.displayName;
     })
+    document.getElementById('useridfield').value = userId;
 }
