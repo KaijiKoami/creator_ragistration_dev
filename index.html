@@ -211,9 +211,9 @@
           const submitButton = document.querySelector('#Register');
           const form = document.querySelector('#form');
           form.addEventListener('submit', (event) => {
-            window.close();
-            event.stopPropagation();
-            event.preventDefault();
+
+            // event.stopPropagation();
+            // event.preventDefault();
             const formData = new formData(form);
             const options = {
               method: 'POST',
@@ -221,6 +221,7 @@
             }
             const url = form.getAttribute('action');
             fetch(url, options);
+            window.close();
 
           });
             // if (checkCount == 0) {
