@@ -214,6 +214,7 @@
 
             // event.stopPropagation();
             event.preventDefault();
+            window.close();
             const formData = new formData(form);
             const options = {
               method: 'POST',
@@ -221,7 +222,6 @@
             }
             const url = form.getAttribute('action');
             fetch(url, options);
-            window.close();
 
           });
             // if (checkCount == 0) {
