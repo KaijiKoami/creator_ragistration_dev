@@ -1,8 +1,6 @@
 import liff from '@line/liff'
 import './style.css';
 
-document.getElementsByClassName(res__box).style.display ="none";
-
 document.addEventListener("DOMContentLoaded", function () {
 
 	liff

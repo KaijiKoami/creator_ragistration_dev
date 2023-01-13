@@ -21,7 +21,7 @@
 				<div><input class="item__contet_tiktokid" name="tiktokid" id="tiktokid" type="text"
 						placeholder="aoni3150" required> </div>
 			</div>
-			<div class="res__box" id="tiktokid">
+			<div class="res__box" id="tiktokid" hidden>
 				<p>TikTokID：<span class="result_tiktokid"></span></p>
 			</div>
 			<!-- ジャンル -->
@@ -120,7 +120,7 @@
 					});
 				</script>
 			</div>
-			<div class="res__box" id="genre">
+			<div class="res__box" id="genre" hidden>
 				<p>ジャンル：<span class="result_genre"></span></p>
 			</div>
 			<!-- 性別 -->
@@ -137,7 +137,7 @@
 					<label for="inq4">回答しない</label>
 				</div>
 			</div>
-			<div class="res__box" id="sex">
+			<div class="res__box" id="sex" hidden>
 				<p>性別：<span class="result_sex"></span></p>
 			</div>
 			<!-- 年齢 -->
@@ -149,7 +149,7 @@
 					required><span>
 					歳</span>
 			</div>
-			<div class="res__box" id="age">
+			<div class="res__box" id="age" hidden>
 				<p>年齢：<span class="result_age"></span></p>
 			</div>
 			<!-- 居住地 -->
@@ -208,7 +208,7 @@
 					<option value="沖縄県">沖縄県</option>
 				</select>
 			</div>
-			<div class="res__box" id="residence">
+			<div class="res__box" id="residence" hidden>
 				<p>居住地：<span class="result_residence"></span></p>
 			</div>
 			<!-- line情報 -->
@@ -239,9 +239,9 @@
 					}
 				</script>
 				<!-- 送信ボタン -->
-				<input type="submit" value="送信" id="Register" class="res__box">
+				<input type="submit" value="送信" id="Register" hidden>
 				<!-- 戻るボタン -->
-				<input type="button" value="戻る" id="go_back" class="res__box">
+				<input type="button" value="戻る" id="go_back" hidden>
 			</div>
 		</form>
 	</div>
