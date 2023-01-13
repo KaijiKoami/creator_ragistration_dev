@@ -12,32 +12,22 @@
 <body text="White">
 	<!-- 画像提出form -->
 	<div id="forms">
-		<form class="item__contet" id="form"
-			action="https://script.google.com/macros/s/AKfycbxsUOusr9NTVlE92YMq-JhJujl7ADf9rHp9Yr4mpcRxXKMrBhI5uxFMPQuXoLrQ5SFk/exec"
-			method="POST">
-			<div class="item__box" id="setQR">
-				<h4 class="item__title">TikTokQRの提出</h4>
-				<label for="file_photo">
-					画像を選択してください
-					<input type="file" accept='image/*' id="file_photo" name="qr_file" onchange="previewImage(this);">
+		<form class="item__contet" id="form" action="">
+			<!-- TIKTOKID -->
+			<div class="item__box" id="tiktokid">
+				<label for="tiktokid">
+					<h4 class="item__title">TikTokID</h4>
 				</label>
-				<p class="preview__image">
-					<img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-						style="max-width:200px;">
-				</p>
-				<script>
-					function previewImage(obj) {
-						var fileReader = new FileReader();
-						fileReader.onload = (function () {
-							document.getElementById('preview').src = fileReader.result;
-						});
-						fileReader.readAsDataURL(obj.files[0]);
-					}
-				</script>
+				<div><input class="item__contet_tiktokid" name="tiktokid" id="tiktokid" type="text"
+						placeholder="aoni3150" required> </div>
 			</div>
+			<div class="res__box" id="tiktokid">
+				<p>TikTokID：<span class="result_tiktokid"></span></p>
+			</div>
+			<!-- ジャンル -->
 			<div class="item__box" id="genre">
 				<h4 class="item__title">投稿ジャンル</h4>
-				<p>TikTokで投稿している動画のジャンルを<strong>3つまで</strong>お答えください。</p>
+				<p>TikTokで投稿している動画で最も注力しているジャンルを<strong>１つ</strong>お答えください。</p>
 				<br>
 				<span>
 					<input type="checkbox" id="カップル" value="カップル" name="genre">
@@ -130,6 +120,10 @@
 					});
 				</script>
 			</div>
+			<div class="res__box" id="genre">
+				<p>ジャンル：<span class="result_genre"></span></p>
+			</div>
+			<!-- 性別 -->
 			<div class="item__box" id="sex">
 				<h4 class="item__title">性別</h4>
 				<div class="item__contet">
@@ -143,13 +137,22 @@
 					<label for="inq4">回答しない</label>
 				</div>
 			</div>
+			<div class="res__box" id="sex">
+				<p>性別：<span class="result_sex"></span></p>
+			</div>
+			<!-- 年齢 -->
 			<div class="item__box" id="age">
 				<label for="age">
 					<h4 class="item__title">年齢</h4>
 				</label>
-				<input class="item__contet" name="age" id="age" type="number" placeholder="20" min="0" max="150"><span>
+				<input class="item__contet" name="age" id="age" type="number" placeholder="20" min="0" max="150"
+					required><span>
 					歳</span>
 			</div>
+			<div class="res__box" id="age">
+				<p>年齢：<span class="result_age"></span></p>
+			</div>
+			<!-- 居住地 -->
 			<div class="item__box" id="residence">
 				<label for="residence_">
 					<h4 class="item__title">居住地（都道府県）</h4>
@@ -205,19 +208,40 @@
 					<option value="沖縄県">沖縄県</option>
 				</select>
 			</div>
+			<div class="res__box" id="residence">
+				<p>居住地：<span class="result_residence"></span></p>
+			</div>
+			<!-- line情報 -->
 			<input type="hidden" id="useridfield" name="useridfield" value="test2">
+			<input type="hidden" id="displayNamefield" name="displayNamefield" value="test2">
+			<!-- ボタン系 -->
 			<div class="item__box" id="sendbtn">
-				<input type="submit" value="Register" id="Register" onclick="click_s()">
+				<!-- 確認ボタン -->
+				<input type="submit" value="確認" id="Confirm" onclick="click_s()">
 				<script>
-					const form = document.querySelector('#form');
-					function click_s() {
-						form.submit();
-						// window.close();
-						form[0].reset();
 
-						return false;
+					const form = document.querySelector('#form');
+
+					function click_s() {
+						let arr_checkBoxes = document.getElementsByName("genre");
+						let count = 0;
+						for (let i = 0; i < arr_checkBoxes.length; i++) {
+							if (arr_checkBoxes[i].checked) {
+								count++;
+							}
+						}
+						if (count > 0) {
+							return true;
+						} else {
+							window.alert("ジャンルを1つ以上選択してください。");
+							return false;
+						};
 					}
 				</script>
+				<!-- 送信ボタン -->
+				<input type="submit" value="送信" id="Register" class="res__box">
+				<!-- 戻るボタン -->
+				<input type="button" value="戻る" id="go_back" class="res__box">
 			</div>
 		</form>
 	</div>

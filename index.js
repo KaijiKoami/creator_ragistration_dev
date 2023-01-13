@@ -1,9 +1,12 @@
 import liff from '@line/liff'
 import './style.css';
 
+document.getElementsByClassName(res__box).style.display ="none";
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    liff.init({ 
+	liff
+		.init({
             liffId: '1657773262-O5ENDkKN'
         })
         .then(() => {
@@ -13,14 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(error)
         })
 
-    // liff
-    //     .getProfile()
-    //     .then((profile) => {
-    //         const name = profile.displayName;
-    //     })
-    //     .catch((err) => {
-    //         console.log("error", err);
-    //     });
 });
 
 function initializeApp() {
@@ -40,9 +35,20 @@ function initializeApp() {
 function getLineData() {
     liff.getProfile()
     .then(profile => {
-      const userId = profile.userId;
-    //   const displayName = profile.displayName;
+		const userId = profile.userId;
+		const displayName = profile.displayName;
 
-      document.getElementById('useridfield').value = userId;
+		document.getElementById('useridfield').value = userId;
+		document.getElementById('displayNamefield').value = displayName;
     })
+}
+
+document.getElementById('form').onsubmit = function (event) {
+	// 再読み込み防止
+	event.preventDefault();
+	// 入力フォームの内容を取得
+	let tiktokid = document.getElementById('form').content.value;
+	// 入力内容を画面に出力
+	document.getElementsByClassName('result_tiktokid').textContent = `${inputForm}`;
+
 }
