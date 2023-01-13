@@ -297,7 +297,7 @@ select {
 }
 
 #sendbtn input[type=button] {
-	appearance: none;
+	/* appearance: none; */
 	font-weight: bold;
     -webkit-appearance: none;
     background-color: transparent;
