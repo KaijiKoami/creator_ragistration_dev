@@ -296,7 +296,7 @@ select {
     margin-bottom: 40px;
 }
 
-#sendbtn input[type=submit] {
+#sendbtn input[type=button] {
 	appearance: none;
 	font-weight: bold;
     -webkit-appearance: none;
@@ -318,7 +318,7 @@ select {
     width: 160px;
 }
 
-#sendbtn input[type=submit]:hover {
+#sendbtn input[type=button]:hover {
     background-color: #999999;
     color: #FFFFFF;
 }
