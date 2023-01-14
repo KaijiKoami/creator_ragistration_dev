@@ -12,6 +12,9 @@ body {
 
 .item__contet {
 	text-align: left;
+}
+
+.item__box,.res__box {
 	padding-bottom: 20px;
 }
 
