@@ -12,6 +12,15 @@
 <body text="White">
 	<!-- 画像提出form -->
 	<div id="forms">
+		<script>
+			document.getElementById('result_tiktokid').style.visibility = 'hidden'
+			document.getElementById('result_genre').style.visibility = 'hidden'
+			document.getElementById('result_sex').style.visibility = 'hidden'
+			document.getElementById('result_age').style.visibility = 'hidden'
+			document.getElementById('result_residence').style.visibility = 'hidden'
+			document.getElementById('Register').style.visibility = 'hidden'
+			document.getElementById('go_back').style.visibility = 'hidden'
+		</script>
 		<form name="creator_form" class="item__contet" id="form" action="">
 			<!-- TIKTOKID -->
 			<div class="item__box" id="tiktokid">
@@ -21,7 +30,7 @@
 				<div><input class="item__contet_tiktokid" name="tiktokid" id="tiktokid" type="text"
 						placeholder="aoni3150" required> </div>
 			</div>
-			<div class="res__box" id="tiktokid" hidden>
+			<div class="res__box" id="result_tiktokid">
 				<p>TikTokID：<span class="result_tiktokid" id="result_tiktokid"></span></p>
 			</div>
 			<!-- ジャンル -->
@@ -120,7 +129,7 @@
 					});
 				</script>
 			</div>
-			<div class="res__box" id="genre" hidden>
+			<div class="res__box" id="result_genre">
 				<p>ジャンル：<span class="result_genre" id="result_genre"></span></p>
 			</div>
 			<!-- 性別 -->
@@ -137,8 +146,8 @@
 					<label for="inq4">回答しない</label>
 				</div>
 			</div>
-			<div class="res__box" id="sex" hidden>
-				<p>性別：<span class="result_sex"></span></p>
+			<div class="res__box" id="result_sex">
+				<p>性別：<span class="result_sex" id="result_sex"></span></p>
 			</div>
 			<!-- 年齢 -->
 			<div class="item__box" id="age">
@@ -149,7 +158,7 @@
 					required><span>
 					歳</span>
 			</div>
-			<div class="res__box" id="age" hidden>
+			<div class="res__box" id="result_age">
 				<p>年齢：<span class="result_age" id="result_age"></span></p>
 			</div>
 			<!-- 居住地 -->
@@ -208,8 +217,8 @@
 					<option value="沖縄県">沖縄県</option>
 				</select>
 			</div>
-			<div class="res__box" id="residence" hidden>
-				<p>居住地：<span class="result_residence"></span></p>
+			<div class="res__box" id="result_residence">
+				<p>居住地：<span class="result_residence" id="result_residence"></span></p>
 			</div>
 			<!-- line情報 -->
 			<input type="hidden" id="useridfield" name="useridfield" value="test2">
@@ -219,9 +228,9 @@
 				<!-- 確認ボタン -->
 				<input type="button" value="確認" id="Confirm" onclick="click_s()">
 				<!-- 送信ボタン -->
-				<input type="button" value="送信" id="Register" hidden>
+				<input type="button" value="送信" id="Register">
 				<!-- 戻るボタン -->
-				<input type="button" value="戻る" id="go_back" hidden>
+				<input type="button" value="戻る" id="go_back">
 			</div>
 		</form>
 	</div>
