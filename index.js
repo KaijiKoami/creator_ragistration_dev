@@ -84,24 +84,24 @@ document.getElementById('Confirm').addEventListener('click', ()=>{
 	document.getElementById("result_residence").textContent = residence;
 
 	//表示変換
-	document.getElementById('tiktokid').style.visibility = 'hidden';
-	document.getElementById('result_tiktokid').style.visibility = 'visible';
+	document.getElementById('tiktokid').style.display ="none";
+	document.getElementById('result_tiktokid').style.display ="";
 
-	document.getElementById('genre').style.visibility = 'hidden';
-	document.getElementById('result_genre').style.visibility = 'visible';
+	document.getElementById('genre').style.display ="none";
+	document.getElementById('result_genre').style.display ="";
 
-	document.getElementById('sex').style.visibility = 'hidden';
-	document.getElementById('result_sex').style.visibility = 'visible';
+	document.getElementById('sex').style.display ="none";
+	document.getElementById('result_sex').style.display ="";
 
-	document.getElementById('age').style.visibility = 'hidden';
-	document.getElementById('result_age').style.visibility = 'visible';
+	document.getElementById('age').style.display ="none";
+	document.getElementById('result_age').style.display ="";
 
-	document.getElementById('residence').style.visibility = 'hidden';
-	document.getElementById('result_residence').style.visibility = 'visible';
+	document.getElementById('residence').style.display ="none";
+	document.getElementById('result_residence').style.display ="";
 
-	document.getElementById('Confirm').style.visibility = 'hidden';
+	document.getElementById('Confirm').style.display ="none";
 
-	document.getElementById('Register').style.visibility = 'visible';
+	document.getElementById('Register').style.display ="";
 
-	document.getElementById('go_back').style.visibility = 'visible';
+	document.getElementById('go_back').style.display ="";
 })
