@@ -44,7 +44,7 @@ function getLineData() {
 document.getElementById('Confirm').addEventListener('click', ()=>{
 
 	// tiktokid取得
-	const tiktokid = document.querySelector('input[type=text][name=tiktokid]').value
+	const tiktokid = document.querySelector('input[type=text][name=tiktokid]').value;
 
 	// ジャンル取得
 	const genres = document.getElementsByName("genre");
@@ -70,7 +70,7 @@ document.getElementById('Confirm').addEventListener('click', ()=>{
 	}
 
 	// 年齢取得
-	const age = document.querySelector('input[type=number][name=age]').value
+	const age = document.querySelector('input[type=number][name=age]').value;
 
 	// 居住地
 	const options_index = document.creator_form.residence.selectedIndex;
