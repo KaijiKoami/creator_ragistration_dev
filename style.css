@@ -46,10 +46,6 @@ select {
     font-size: 20px;
 }
 
-.tiktokid {
-    padding-bottom: 20px;
-}
-
 .tiktokid label {
     display: block;
     font-size: 16px;
@@ -112,10 +108,6 @@ select {
  *****************************ジャンル***************************
  **************************************************************/
 
-.genre {
-    padding-bottom: 20px;
-}
-
 .genre input[type=checkbox] {
     display: none;
     margin: 0;
@@ -172,10 +164,6 @@ select {
  ******************************性別*****************************
  **************************************************************/
 
-.sex {
-    padding-bottom: 20px;
-}
-
 .sex input[type=radio] {
     display: none;
     margin: 0;
@@ -228,11 +216,6 @@ select {
  ******************************年齢*****************************
  **************************************************************/
 
-
-.age {
-    padding-bottom: 20px;
-}
-
 .age label {
     display: block;
     font-size: 16px;
@@ -257,7 +240,6 @@ select {
  **************************************************************/
 
 .residence {
-    padding-bottom: 20px;
     position: relative;
 }
 
