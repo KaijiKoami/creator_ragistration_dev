@@ -7,7 +7,8 @@ body {
 body {
     background-image: url("https://solezore.co.jp/wp-content/uploads/2022/03/bg.jpg");
     background-size: cover;
-    margin: 30px;
+	margin: 30px;
+	display: none;
 }
 
 .item__contet {
