@@ -48,5 +48,69 @@ document.getElementById('form').onsubmit = function (event) {
 	let tiktokid = document.getElementById('form').content.value;
 	// 入力内容を画面に出力
 	document.getElementsByClassName('result_tiktokid').textContent = `${inputForm}`;
-
 }
+
+document.getElementById('Confirm').addEventListener('click', ()=>{
+
+	// tiktokid取得
+	const tiktokid = document.querySelector('input[type=text][name=tiktokid]').value
+
+	// ジャンル取得
+	const genres = document.getElementsByName("genre");
+	let count = 0;
+	for (let i = 0; i < genres.length; i++) {
+		if (genres[i].checked) {
+			count++;
+			genre = genres[i].value;
+		}
+	}
+	if (count < 1) {
+		window.alert("ジャンルを1つ以上選択してください。");
+		return false;
+	};
+
+	// 性別取得
+	const sexes = document.getElementsByName('sex');
+
+	for(let i = 0; i < sexes.length; i++){
+		if(sexes[i].checked){ // ⑤
+			sex += sexes[i].value; // ⑥
+		}
+	}
+
+	// 年齢取得
+	const age = document.querySelector('input[type=number][name=age]').value
+
+	// 居住地
+	const options_index = document.creator_form.residence.selectedIndex;
+	const residence = document.creator_form.residence.options[num].value;
+
+	//値の表示
+	document.getElementById("result_tiktokid").textContent = tiktokid;
+	document.getElementById("result_genre").textContent = genre;
+	document.getElementById("result_sex").textContent = sex;
+	document.getElementById("result_age").textContent = age;
+	document.getElementById("result_residence").textContent = residence;
+
+	//表示変換
+	document.getElementById('tiktokid').style.visibility = 'hidden'
+	document.getElementById('result_tiktokid').style.visibility = 'visible'
+
+	document.getElementById('genre').style.visibility = 'hidden'
+	document.getElementById('result_genre').style.visibility = 'visible'
+
+	document.getElementById('sex').style.visibility = 'hidden'
+	document.getElementById('result_sex').style.visibility = 'visible'
+
+	document.getElementById('age').style.visibility = 'hidden'
+	document.getElementById('result_age').style.visibility = 'visible'
+
+	document.getElementById('residence').style.visibility = 'hidden'
+	document.getElementById('result_residence').style.visibility = 'visible'
+
+	document.getElementById('Confirm').style.visibility = 'hidden'
+
+	document.getElementById('Register').style.visibility = 'visible'
+
+	document.getElementById('go_back').style.visibility = 'visible'
+})

@@ -12,7 +12,7 @@
 <body text="White">
 	<!-- 画像提出form -->
 	<div id="forms">
-		<form class="item__contet" id="form" action="">
+		<form name="creator_form" class="item__contet" id="form" action="">
 			<!-- TIKTOKID -->
 			<div class="item__box" id="tiktokid">
 				<label for="tiktokid">
@@ -22,7 +22,7 @@
 						placeholder="aoni3150" required> </div>
 			</div>
 			<div class="res__box" id="tiktokid" hidden>
-				<p>TikTokID：<span class="result_tiktokid"></span></p>
+				<p>TikTokID：<span class="result_tiktokid" id="result_tiktokid"></span></p>
 			</div>
 			<!-- ジャンル -->
 			<div class="item__box" id="genre">
@@ -121,7 +121,7 @@
 				</script>
 			</div>
 			<div class="res__box" id="genre" hidden>
-				<p>ジャンル：<span class="result_genre"></span></p>
+				<p>ジャンル：<span class="result_genre" id="result_genre"></span></p>
 			</div>
 			<!-- 性別 -->
 			<div class="item__box" id="sex">
@@ -150,7 +150,7 @@
 					歳</span>
 			</div>
 			<div class="res__box" id="age" hidden>
-				<p>年齢：<span class="result_age"></span></p>
+				<p>年齢：<span class="result_age" id="result_age"></span></p>
 			</div>
 			<!-- 居住地 -->
 			<div class="item__box" id="residence">
@@ -218,26 +218,6 @@
 			<div class="item__box" id="sendbtn">
 				<!-- 確認ボタン -->
 				<input type="button" value="確認" id="Confirm" onclick="click_s()">
-				<script>
-
-					const form = document.querySelector('#form');
-
-					function click_s() {
-						let arr_checkBoxes = document.getElementsByName("genre");
-						let count = 0;
-						for (let i = 0; i < arr_checkBoxes.length; i++) {
-							if (arr_checkBoxes[i].checked) {
-								count++;
-							}
-						}
-						if (count > 0) {
-							return true;
-						} else {
-							window.alert("ジャンルを1つ以上選択してください。");
-							return false;
-						};
-					}
-				</script>
 				<!-- 送信ボタン -->
 				<input type="button" value="送信" id="Register" hidden>
 				<!-- 戻るボタン -->
