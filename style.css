@@ -41,16 +41,16 @@ select {
  ****************************TiktokID**************************
  **************************************************************/
 
-#tiktokid>div::before{
+.tiktokid>div::before{
 	content: "@";
     font-size: 20px;
 }
 
-#tiktokid {
+.tiktokid {
     padding-bottom: 20px;
 }
 
-#tiktokid label {
+.tiktokid label {
     display: block;
     font-size: 16px;
     padding-bottom: 5px;
@@ -112,16 +112,16 @@ select {
  *****************************ジャンル***************************
  **************************************************************/
 
-#genre {
+.genre {
     padding-bottom: 20px;
 }
 
-#genre input[type=checkbox] {
+.genre input[type=checkbox] {
     display: none;
     margin: 0;
 }
 
-#genre input[type=checkbox]+label {
+.genre input[type=checkbox]+label {
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
@@ -131,7 +131,7 @@ select {
     position: relative;
 }
 
-#genre input[type=checkbox]+label::before {
+.genre input[type=checkbox]+label::before {
 	border: 1px solid #999999;
 	background-color:white;
     box-sizing: border-box;
@@ -147,7 +147,7 @@ select {
     width: 16px;
 }
 
-#genre input[type=checkbox]:checked+label::after {
+.genre input[type=checkbox]:checked+label::after {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -157,7 +157,7 @@ select {
     top: 50%;
 }
 
-#genre input[type=checkbox]:checked+label::after {
+.genre input[type=checkbox]:checked+label::after {
     border-bottom: 1px solid #333333;
     border-left: 1px solid #333333;
     left: 3px;
@@ -172,16 +172,16 @@ select {
  ******************************性別*****************************
  **************************************************************/
 
-#sex {
+.sex {
     padding-bottom: 20px;
 }
 
-#sex input[type=radio] {
+.sex input[type=radio] {
     display: none;
     margin: 0;
 }
 
-#sex input[type=radio]+label {
+.sex input[type=radio]+label {
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
@@ -191,7 +191,7 @@ select {
     position: relative;
 }
 
-#sex input[type=radio]+label::before {
+.sex input[type=radio]+label::before {
 	border: 1px solid #777777;
 	background-color:white;
     border-radius: 50%;
@@ -208,7 +208,7 @@ select {
     width: 16px;
 }
 
-#sex input[type=radio]:checked+label::after {
+.sex input[type=radio]:checked+label::after {
     background: #333333;
     border-radius: 50%;
     box-sizing: border-box;
@@ -229,17 +229,17 @@ select {
  **************************************************************/
 
 
-#age {
+.age {
     padding-bottom: 20px;
 }
 
-#age label {
+.age label {
     display: block;
     font-size: 16px;
     padding-bottom: 5px;
 }
 
-#age input[type=number] {
+.age input[type=number] {
     background: #fff;
     border: 1px solid #999999;
     border-radius: 0;
@@ -256,12 +256,12 @@ select {
  *****************************居住地****************************
  **************************************************************/
 
-#residence {
+.residence {
     padding-bottom: 20px;
     position: relative;
 }
 
-#residence select {
+.residence select {
     appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -282,7 +282,7 @@ select {
     width: 80px;
 }
 
-#residence label {
+.residence label {
     position: relative;
 }
 
@@ -291,12 +291,12 @@ select {
  ***************************送信ボタン***************************
  **************************************************************/
 
-#sendbtn {
+.sendbtn {
     margin-top: 30px;
     margin-bottom: 40px;
 }
 
-#sendbtn input[type=button] {
+.sendbtn input[type=button] {
 	appearance: none;
 	font-weight: bold;
     -webkit-appearance: none;
@@ -318,7 +318,7 @@ select {
     width: 160px;
 }
 
-#sendbtn input[type=button]:hover {
+.sendbtn input[type=button]:hover {
     background-color: #999999;
     color: #FFFFFF;
 }

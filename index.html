@@ -14,19 +14,19 @@
 	<div id="forms">
 		<form name="creator_form" class="item__contet" id="form">
 			<!-- TIKTOKID -->
-			<div class="item__box" id="tiktokid__box">
+			<div class="item__box tiktokid" id="tiktokid__box">
 				<label for="tiktokid">
-					<h4 class="item__title">TikTokID</h4>
+					<h4 class="item__title tiktokid">TikTokID</h4>
 				</label>
-				<div><input class="item__contet_tiktokid" name="tiktokid" id="tiktokid" type="text"
+				<div><input class="item__contet_tiktokid tiktokid" name="tiktokid" id="tiktokid" type="text"
 						placeholder="aoni3150" required> </div>
 			</div>
-			<div class="res__box" id="result_tiktokid__box">
-				<p>TikTokID：<span class="result_tiktokid" id="result_tiktokid"></span></p>
+			<div class="res__box tiktokid" id="result_tiktokid__box">
+				<p>TikTokID：<span class="result_tiktokid tiktokid" id="result_tiktokid"></span></p>
 			</div>
 			<!-- ジャンル -->
-			<div class="item__box" id="genre__box">
-				<h4 class="item__title">投稿ジャンル</h4>
+			<div class="item__box genre" id="genre__box">
+				<h4 class="item__title genre">投稿ジャンル</h4>
 				<p>TikTokで投稿している動画で最も注力しているジャンルを<strong>１つ</strong>お答えください。</p>
 				<br>
 				<span>
@@ -120,13 +120,13 @@
 					});
 				</script>
 			</div>
-			<div class="res__box" id="result_genre__box">
-				<p>ジャンル：<span class="result_genre" id="result_genre"></span></p>
+			<div class="res__box genre" id="result_genre__box">
+				<p>ジャンル：<span class="result_genre genre" id="result_genre"></span></p>
 			</div>
 			<!-- 性別 -->
-			<div class="item__box" id="sex__box">
-				<h4 class="item__title">性別</h4>
-				<div class="item__contet">
+			<div class="item__box sex" id="sex__box">
+				<h4 class="item__title sex">性別</h4>
+				<div class="item__contet sex">
 					<input type="radio" id="inq1" name="sex" value="男性">
 					<label for="inq1">男性</label>
 					<input type="radio" id="inq2" name="sex" value="女性">
@@ -137,25 +137,25 @@
 					<label for="inq4">回答しない</label>
 				</div>
 			</div>
-			<div class="res__box" id="result_sex__box">
-				<p>性別：<span class="result_sex" id="result_sex"></span></p>
+			<div class="res__box sex" id="result_sex__box">
+				<p>性別：<span class="result_sex sex" id="result_sex"></span></p>
 			</div>
 			<!-- 年齢 -->
-			<div class="item__box" id="age__box">
+			<div class="item__box age" id="age__box">
 				<label for="age">
-					<h4 class="item__title">年齢</h4>
+					<h4 class="item__title age">年齢</h4>
 				</label>
-				<input class="item__contet" name="age" id="age" type="number" placeholder="20" min="0" max="150"
+				<input class="item__contet age" name="age" id="age" type="number" placeholder="20" min="0" max="150"
 					required><span>
 					歳</span>
 			</div>
-			<div class="res__box" id="result_age__box">
-				<p>年齢：<span class="result_age" id="result_age"></span></p>
+			<div class="res__box age" id="result_age__box">
+				<p>年齢：<span class="result_age age" id="result_age"></span></p>
 			</div>
 			<!-- 居住地 -->
-			<div class="item__box" id="residence__box">
+			<div class="item__box residence" id="residence__box">
 				<label for="residence_">
-					<h4 class="item__title">居住地（都道府県）</h4>
+					<h4 class="item__title residence">居住地（都道府県）</h4>
 				</label>
 				<select name="residence" id="residence_" placeholder="選択してください">
 					<option value="">-</option>
@@ -208,8 +208,8 @@
 					<option value="沖縄県">沖縄県</option>
 				</select>
 			</div>
-			<div class="res__box" id="result_residence__box">
-				<p>居住地：<span class="result_residence" id="result_residence"></span></p>
+			<div class="res__box residence" id="result_residence__box">
+				<p>居住地：<span class="result_residence residence" id="result_residence"></span></p>
 			</div>
 			<!-- line情報 -->
 			<input type="hidden" id="useridfield" name="useridfield" value="test2">
@@ -238,7 +238,6 @@
 
 	</script>
 	<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-	<script charset="utf-8" src="./index.js"></script>
 </body>
 
 </html>
