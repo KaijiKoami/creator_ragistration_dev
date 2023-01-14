@@ -41,15 +41,6 @@ function getLineData() {
     })
 }
 
-document.getElementById('form').onsubmit = function (event) {
-	// 再読み込み防止
-	event.preventDefault();
-	// 入力フォームの内容を取得
-	let tiktokid = document.getElementById('form').content.value;
-	// 入力内容を画面に出力
-	document.getElementsByClassName('result_tiktokid').textContent = `${inputForm}`;
-}
-
 document.getElementById('Confirm').addEventListener('click', ()=>{
 
 	// tiktokid取得
