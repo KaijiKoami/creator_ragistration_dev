@@ -84,20 +84,20 @@ document.getElementById('Confirm').addEventListener('click', ()=>{
 	document.getElementById("result_residence").textContent = residence;
 
 	//表示変換
-	document.getElementById('tiktokid').style.display ="none";
-	document.getElementById('result_tiktokid').style.display ="";
+	document.getElementById('tiktokid__box').style.display ="none";
+	document.getElementById('result_tiktokid__box').style.display ="";
 
-	document.getElementById('genre').style.display ="none";
-	document.getElementById('result_genre').style.display ="";
+	document.getElementById('genre__box').style.display ="none";
+	document.getElementById('result_genre__box').style.display ="";
 
-	document.getElementById('sex').style.display ="none";
-	document.getElementById('result_sex').style.display ="";
+	document.getElementById('sex__box').style.display ="none";
+	document.getElementById('result_sex__box').style.display ="";
 
-	document.getElementById('age').style.display ="none";
-	document.getElementById('result_age').style.display ="";
+	document.getElementById('age__box').style.display ="none";
+	document.getElementById('result_age__box').style.display ="";
 
-	document.getElementById('residence').style.display ="none";
-	document.getElementById('result_residence').style.display ="";
+	document.getElementById('residence__box').style.display ="none";
+	document.getElementById('result_residence__box').style.display ="";
 
 	document.getElementById('Confirm').style.display ="none";
 
