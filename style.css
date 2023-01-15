@@ -280,7 +280,7 @@ select {
     margin-bottom: 40px;
 }
 
-.sendbtn input[type=button] {
+.sendbtn input[type=button] , .sendbtn input[type=submit] {
 	appearance: none;
 	font-weight: bold;
     -webkit-appearance: none;
@@ -302,7 +302,7 @@ select {
     width: 160px;
 }
 
-.sendbtn input[type=button]:hover {
+.sendbtn input[type=button]:hover , .sendbtn input[type=submit]:hover{
     background-color: #999999;
     color: #FFFFFF;
 }
