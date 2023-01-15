@@ -15,7 +15,12 @@ body {
 }
 
 .item__box,.res__box {
-	padding-bottom: 20px;
+	padding-bottom: 30px;
+}
+
+.res__box{
+	font-size: 25px;
+	
 }
 
 form {
