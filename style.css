@@ -20,7 +20,7 @@ body {
 
 .res__box{
 	font-size: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 form {
@@ -295,9 +295,9 @@ select {
     color: #FFFFFF;
     cursor: pointer;
     display: block;
-    font-size: 15px;
+    font-size: 20px;
 	padding: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
     text-align: center;
     text-decoration: none;
     transition: 0.2s ease-in-out;
@@ -305,7 +305,7 @@ select {
     -moz-transition: 0.2s ease-in-out;
     -webkit-transition: 0.2s ease-in-out;
     height: 45px;
-    width: 120px;
+    width: 300px;
 }
 
 .sendbtn input[type=button]:hover , .sendbtn input[type=submit]:hover{
