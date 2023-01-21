@@ -20,6 +20,7 @@ body {
 
 .res__box{
 	font-size: 20px;
+	margin-bottom: 20px;
 }
 
 form {
@@ -295,7 +296,8 @@ select {
     cursor: pointer;
     display: block;
     font-size: 15px;
-    padding: 10px;
+	padding: 10px;
+	margin-bottom: 20px;
     text-align: center;
     text-decoration: none;
     transition: 0.2s ease-in-out;
