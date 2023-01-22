@@ -78,12 +78,12 @@ select {
  **************************フォロワー数************************
  **************************************************************/
 
-.follower-count label {
+.follower_count label {
     display: block;
     font-size: 16px;
 }
 
-.follower-count input[type=number] {
+.follower_count input[type=number] {
     background: #fff;
     border: 1px solid #999999;
     border-radius: 0;
