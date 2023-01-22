@@ -19,7 +19,7 @@ body {
 }
 
 .res__box{
-	font-size: 20px;
+	font-size: 30px;
 	margin-bottom: 30px;
 }
 
@@ -74,6 +74,27 @@ select {
     width: 200px;
 }
 
+/**************************************************************
+ **************************フォロワー数************************
+ **************************************************************/
+
+.follower-count label {
+    display: block;
+    font-size: 16px;
+}
+
+.follower-count input[type=number] {
+    background: #fff;
+    border: 1px solid #999999;
+    border-radius: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 16px;
+    /* padding: 10px; */
+    height: 30px;
+    width: 80px;
+}
 /**************************************************************
  ***************************QRフォーム***************************
  **************************************************************/

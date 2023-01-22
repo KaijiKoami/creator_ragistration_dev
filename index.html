@@ -13,7 +13,7 @@
 	<!-- 画像提出form -->
 	<div id="forms">
 		<form name="creator_form" class="item__contet" id="form"
-			action="https://script.google.com/macros/s/AKfycbyINhrBRnYTdUj4n-2jOR8uz9K8glEAVZlXeb6l8J5MUI1U7_HS0cbchX33Xn-Dfp8i/exec"
+			action="https://script.google.com/macros/s/AKfycbzH6SHqL6LZ-l9W7Qnr3mLhfxgO7RPPGvr6VwRhHcMpPpt4YGu7Sy_yIBGqBbGYndRp/exec"
 			method="POST" onsubmit="return close_window()">
 			<!-- TIKTOKID -->
 			<div class="item__box tiktokid" id="tiktokid__box">
@@ -25,6 +25,18 @@
 			</div>
 			<div class="res__box tiktokid" id="result_tiktokid__box">
 				<p>TikTokID：<b><span class="result_tiktokid tiktokid" id="result_tiktokid"></span></b></p>
+			</div>
+			<!-- フォロワー数 -->
+			<div class="item__box follower-count" id="follower-count__box">
+				<label for="follower-count">
+					<h4 class="item__title follower-count">フォロワー数</h4>
+				</label>
+				<input class="item__contet follower-count" name="follower-count" id="follower-count" type="number" placeholder="20" min="0" max="150"
+					required><span>
+					人</span>
+			</div>
+			<div class="res__box follower-count" id="result_follower-count__box">
+				<p>年齢：<b><span class="result_follower-count follower-count" id="result_follower-count"></span></b></p>
 			</div>
 			<!-- ジャンル -->
 			<div class="item__box genre" id="genre__box">
