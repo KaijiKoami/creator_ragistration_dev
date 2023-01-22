@@ -13,7 +13,7 @@
 	<!-- 画像提出form -->
 	<div id="forms">
 		<form name="creator_form" class="item__contet" id="form"
-			action="https://script.google.com/macros/s/AKfycbzH6SHqL6LZ-l9W7Qnr3mLhfxgO7RPPGvr6VwRhHcMpPpt4YGu7Sy_yIBGqBbGYndRp/exec"
+			action="https://script.google.com/macros/s/AKfycbzwBRUGwzyczRzNKvbDCoKtbN1Sz9m6ozoKoijZ_9NnIeM6GpNRw9twX_qb0NNB53S-/exec"
 			method="POST" onsubmit="return close_window()">
 			<!-- TIKTOKID -->
 			<div class="item__box tiktokid" id="tiktokid__box">
@@ -27,16 +27,16 @@
 				<p>TikTokID：<b><span class="result_tiktokid tiktokid" id="result_tiktokid"></span></b></p>
 			</div>
 			<!-- フォロワー数 -->
-			<div class="item__box follower-count" id="follower-count__box">
-				<label for="follower-count">
-					<h4 class="item__title follower-count">フォロワー数</h4>
+			<div class="item__box follower_count" id="follower_count__box">
+				<label for="follower_count">
+					<h4 class="item__title follower_count">フォロワー数</h4>
 				</label>
-				<input class="item__contet follower-count" name="follower-count" id="follower-count" type="number" placeholder="20" min="0" max="150"
-					required><span>
+				<input class="item__contet follower_count" name="follower_count" id="follower_count" type="number"
+					placeholder="100000" min="0" required><span>
 					人</span>
 			</div>
-			<div class="res__box follower-count" id="result_follower-count__box">
-				<p>年齢：<b><span class="result_follower-count follower-count" id="result_follower-count"></span></b></p>
+			<div class="res__box follower_count" id="result_follower_count__box">
+				<p>年齢：<b><span class="result_follower_count follower_count" id="result_follower_count"></span></b></p>
 			</div>
 			<!-- ジャンル -->
 			<div class="item__box genre" id="genre__box">
@@ -238,6 +238,8 @@
 						// tiktokid取得
 						const tiktokid = document.getElementById("tiktokid").value;
 
+						const follower_count = document.getElementById("follower_count").value;
+
 						// ジャンル取得
 						const genres = document.getElementsByName("genre");
 						let count = 0;
@@ -271,6 +273,7 @@
 
 						//値の表示
 						document.getElementById("result_tiktokid").textContent = tiktokid;
+						document.getElementById("result_tiktokid").textContent = follower_count;
 						document.getElementById("result_genre").textContent = genre;
 						document.getElementById("result_sex").textContent = sex;
 						document.getElementById("result_age").textContent = age;
@@ -278,7 +281,10 @@
 
 						//表示変換
 						document.getElementById('tiktokid__box').style.display = "none";
-						document.getElementById('result_tiktokid__box').style.display = "";
+						document.getElementById('result_tiktokid__box').style.display = ""
+
+						document.getElementById('follower_count__box').style.display = "none";
+						document.getElementById('result_follower_count__box').style.display = "";
 
 						document.getElementById('genre__box').style.display = "none";
 						document.getElementById('result_genre__box').style.display = "";
@@ -317,6 +323,9 @@
 						//表示変換
 						document.getElementById('tiktokid__box').style.display = "";
 						document.getElementById('result_tiktokid__box').style.display = "none";
+
+						document.getElementById('follower_count__box').style.display = "";
+						document.getElementById('result_follower_count__box').style.display = "none";
 
 						document.getElementById('genre__box').style.display = "";
 						document.getElementById('result_genre__box').style.display = "none";

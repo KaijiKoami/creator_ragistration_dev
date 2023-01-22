@@ -42,6 +42,7 @@ function getLineData() {
 }
 
 document.getElementById('result_tiktokid__box').style.display ="none";
+document.getElementById('result_follower_count').style.display ="none";
 document.getElementById('result_genre__box').style.display ="none";
 document.getElementById('result_sex__box').style.display ="none";
 document.getElementById('result_age__box').style.display ="none";
