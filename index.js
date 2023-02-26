@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	liff
 		.init({
-            liffId: '1657773262-O5ENDkKN'
+            liffId: '1660669373-ZEBMMMoo'
         })
         .then(() => {
             initializeApp();
